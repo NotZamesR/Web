@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Cool Chat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" class="brand">Super Cool Chat</a>
+        <a href="#about">About Me</a>
+        <a href="#confess">Confess</a>
+        <button id="admin-login-btn">Admin Login</button>
+    </div>
+
+    <div class="container">
+        <div id="home">
+            <h1>Welcome to Super Cool Chat</h1>
+            <button onclick="showChat()">Start Chatting</button>
+        </div>
+
+        <div id="about">
+            <img src="photo.jpg" alt="Profile Photo" class="profile-photo">
+            <h2>About Me</h2>
+            <p>Hi, I'm the developer of this cool chat app. Enjoy your stay and happy chatting!</p>
+        </div>
+
+        <div id="confess">
+            <h2>Confess Your Thoughts</h2>
+            <textarea id="confession" placeholder="Write your confession here..."></textarea>
+            <button onclick="submitConfession()">Submit</button>
+        </div>
+
+        <div id="chat" class="hidden">
+            <h2>Chat Room</h2>
+            <input type="text" id="username" placeholder="Enter your name">
+            <button onclick="joinChat()">Join Chat</button>
+            <div id="chat-box" class="hidden">
+                <div id="messages"></div>
+                <input type="text" id="message" placeholder="Type your message">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+
+        <div id="admin-chat" class="hidden">
+            <h2>Admin Chat</h2>
+            <div id="admin-messages"></div>
+            <input type="text" id="admin-message" placeholder="Type your admin message">
+            <button onclick="sendAdminMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
